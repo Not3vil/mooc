@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mysql = require('mysql')
+var fs= require('fs')
+
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'myuser',
@@ -13,6 +15,12 @@ var connection = mysql.createConnection({
 
 connection.connect()
 
+fs.readFile(path.join(__dirname, 'db/cre_db.sql'), 'utf-8', function(err, data) {
+  if (err) {
+    return data;
+  }
+  console.log(data)
+});
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
