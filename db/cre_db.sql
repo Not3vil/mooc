@@ -25,4 +25,3 @@ CREATE TABLE `item` (
 `used in weekends` INT NOT NULL,
 `holiday season` INT NOT NULL,
 `space to cost factir` INT NOT NULL);
-)
