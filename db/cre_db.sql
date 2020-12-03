@@ -1,9 +1,9 @@
-DROP TABLE IF EXISTS `inventory list`;
-DROP TABLE IF EXISTS `job list`;
-DROP TABLE IF EXISTS `item list`;
+DROP TABLE IF EXISTS `inven`;
+DROP TABLE IF EXISTS `job`;
+DROP TABLE IF EXISTS `item`;
 
 
-CREATE TABLE `inventory list` (
+CREATE TABLE `inven` (
 `UUID` TINYTEXT PRIMARY KEY NOT NULL UNIQUE,
 `item ref id` TINYTEXT NOT NULL UNIQUE,
 `weight` INT,
@@ -11,7 +11,7 @@ CREATE TABLE `inventory list` (
 `Reciving time` DATETIME NOT NULL,
 `position` INT NOT NULL);
 
-CREATE TABLE `job list` (
+CREATE TABLE `job` (
 `UUID` TINYTEXT PRIMARY KEY NOT NULL UNIQUE,
 `old position` TINYTEXT NOT NULL UNIQUE,
 `new position` TINYTEXT NOT NULL UNIQUE,
@@ -20,12 +20,11 @@ CREATE TABLE `job list` (
 `in transit` BOOLEAN NOT NULL,
 `time of deposit` TIMESTAMP NOT NULL);
 
-CREATE TABLE `item list` (
+CREATE TABLE `item` (
 `Item Ref Id` TINYTEXT PRIMARY KEY NOT NULL UNIQUE,
 `profit margins` INT NOT NULL,
 `month of activity` INT NOT NULL,
 `used in weekends` INT NOT NULL,
 `holiday season` INT NOT NULL,
 `space to cost factir` INT NOT NULL);
-
-
+)
