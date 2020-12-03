@@ -28,3 +28,4 @@ CREATE TABLE `item list` (
 `holiday season` INT NOT NULL,
 `space to cost factir` INT NOT NULL);
 
+
