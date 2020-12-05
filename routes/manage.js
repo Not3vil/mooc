@@ -6,11 +6,19 @@ router.get('/', function(req, res, next) {
   res.render('manage', { title: 'Management' });
 });
 
-router.post('/additem', function(req, res, nxt) {
+router.post('/item/add', function(req, res, nxt) {
   res.send("not implemented");
 });
 
-router.post('/addemp', function(req, res, nxt) {
+router.post('/item/rm', function(req, res, nxt) {
+  res.send("not implemented");
+});
+
+router.post('/item/add', function(req, res, nxt) {
+  res.send("not implemented");
+});
+
+router.post('/item/rm', function(req, res, nxt) {
   res.send("not implemented");
 });
 
