@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var sql = require('../db/db')
 
 module.exports.injest = (req, res, nxt) => {
@@ -44,4 +45,14 @@ module.exports.outjest = (req, res, nxt) => {
         }
     });
   res.status(200).send(querRes);
+=======
+var sql = require('../db/db.js')
+
+module.exports.injest = (req, res, nxt) => {
+  res.send("Not implemented")
+};  
+
+module.exports.outjest = function outjest (req, res) {
+  res.send("Not implemented")
+>>>>>>> d13bb8baf0da4b1638e59be19cf04d55b762caf7
 };  
