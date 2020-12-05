@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('job', { title: 'job' });
 });
 
-router.post('/job', cont.showjob);
+router.post('/job', cont.joblist);
 
 //Imolement auth for employees
 
